@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NetWork - Connecting job seekers with employers to bridge the gap between talent and opportunity.">
+    <title>NetWork - Home</title>
+    <style>
+
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #0073b1, #004d7a);
+            color: white;
+            padding: 20px 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        
+
+        .logo-image {
+            width: 250px;
+        }
+
+        .logo-text {
+            font-size: 32px;
+            font-weight: bold;
+            margin-left: 20px;
+            color: white;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #0073b1;
+            background: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn:hover {
+            background: #f0f0f0;
+            transform: translateY(-2px);
+        }
+
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 100px 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .text-section {
+            width: 50%;
+        }
+
+        .text-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #0073b1;
+        }
+
+        .text-section p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .image-placeholder {
+            width: 45%;
+            height: 450px;
+            background: linear-gradient(135deg, #0073b1, #004d7a);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+        }
+
+        .image-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .info-section {
+            background: linear-gradient(135deg, #0073b1, #004d7a);
+            padding: 50px;
+            text-align: center;
+            color: white;
+        }
+
+        .info-section p {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .info-section p:first-child {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .post-job-btn {
+            padding: 12px 25px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #0073b1;
+            background: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .post-job-btn:hover {
+            background: #f0f0f0;
+            transform: translateY(-2px);
+        }
+
+
+        .extra-section {
+            background-color: #ffffff;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .extra-section h2 {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #0073b1;
+        }
+
+        .extra-section p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .image-gallery img {
+            width: 30%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.05);
+        }
+
+
+        .cream-section {
+            background: linear-gradient(135deg, #f8f9fa, #e0e0e0);
+            padding: 50px;
+            text-align: center;
+        }
+
+        .cream-section p {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .cream-section p:first-child {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+
+        .footer {
+            background: linear-gradient(135deg, #0073b1, #004d7a);
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <header class="header">
+        <div class="logo-container">
+            <div class="logo-background">
+                <img src="static/NW.png"  class="logo-image">
+            </div>
+            
+        </div>
+        <nav class="nav-buttons">
+            <a href="{{ url_for('signup') }}" class="btn">Sign Up</a>
+            <a href="{{ url_for('login') }}" class="btn">Login</a>
+        </nav>
+    </header>
+
+
+    <main>
+        <section class="content">
+            <div class="text-section">
+                <h2>Connecting Job Seekers with Employers</h2>
+                <p>We help job seekers find the right opportunities and assist employers in hiring the best talent. Our goal is to bridge the gap between talent and opportunity, ensuring success for both parties.</p>
+                <p>Sign up today and start your journey to success!</p>
+            </div>
+            <div class="image-placeholder">
+                <img src="static/Main.jpg" alt="Job Seekers and Employers">
+            </div>
+        </section>
+
+
+        <section class="info-section">
+            <p>Find the right job or internship for you</p>
+            <p>We make job searching easier by matching candidates with top companies, helping employers find skilled talent, and making career growth a reality for thousands of professionals.</p>
+            <button class="post-job-btn">Search Jobs</button>
+        </section>
+
+        <section class="extra-section">
+            <h2>Why Choose Us?</h2>
+            <p>We are committed to bridging the gap between talented professionals and top employers. Our platform empowers job seekers to find opportunities that align with their skills, aspirations, and career goals while enabling companies to connect with the right talent.</p>
+            <div class="image-gallery">
+                <img src="static/Img1.jpg" alt="Professional Networking">
+                <img src="static/Img2.jpg" alt="Job Interview">
+                <img src="static/Img3.jpg" alt="Career Growth">
+            </div>
+        </section>
+
+
+        <section class="cream-section">
+            <p>Your Perfect Candidate is Just a Click Away!</p>
+            <p>Looking to Hire? Find the Right Talent for Your Team. Post your job today and connect with professionals who match your needs.</p>
+            <a href="#" class="post-job-btn">Post a Job</a>
+        </section>
+    </main>
+
+
+    <footer class="footer">
+        <p>&copy; 2025 NetWork.   All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
