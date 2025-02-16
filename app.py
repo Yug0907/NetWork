@@ -66,6 +66,10 @@ def login():
 def dashboard():
     return render_template('dashboard.html')
 
+@app.route('/logout')
+def logout():
+    return redirect(url_for('login'))
+
 
 #running the application
 if __name__ == '__main__':
